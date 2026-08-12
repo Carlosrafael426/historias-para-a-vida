@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primárias — reamostrar de logo.png quando disponível */
-  --color-brand-blue-50: #eff8fe;
-  --color-brand-blue-100: #dceffc;
-  --color-brand-blue-400: #4fa3d8;
-  --color-brand-blue-500: #2f8fd1;
-  --color-brand-blue-600: #1d6fa8;
-  --color-brand-blue-700: #175784;
+  /* Primárias — amostradas da logo.png (azul do livro/título + coral do "Amor") */
+  --color-brand-blue-50: #eef5fb;
+  --color-brand-blue-100: #d9e8f5;
+  --color-brand-blue-400: #5c8fbe;
+  --color-brand-blue-500: #3e7cb1;
+  --color-brand-blue-600: #2d6291;
+  --color-brand-blue-700: #234c72;
 
-  --color-brand-coral-50: #fff1f2;
-  --color-brand-coral-100: #ffdee2;
-  --color-brand-coral-400: #ff8a97;
-  --color-brand-coral-500: #f2637a;
-  --color-brand-coral-600: #d94661;
-  --color-brand-coral-700: #b5334b;
+  --color-brand-coral-50: #fdf1f0;
+  --color-brand-coral-100: #fbdedb;
+  --color-brand-coral-400: #e58a8f;
+  --color-brand-coral-500: #d9677e;
+  --color-brand-coral-600: #bf4c66;
+  --color-brand-coral-700: #9c3a52;
 
   /* Acentos pontuais — usar com moderação, nunca todos juntos */
-  --color-accent-green: #6fbe8f;
-  --color-accent-mustard: #e8b94b;
-  --color-accent-purple: #9b84d6;
+  --color-accent-green: #4f9e75;
+  --color-accent-mustard: #ddae45;
+  --color-accent-purple: #8b63a8;
 
   /* Neutros */
-  --color-cream: #fdf6ec;
+  --color-cream: #faf7ef; /* próximo do fundo real de logo.png, evita "costura" visível */
   --color-ink: #2b2540;
   --color-ink-soft: #6b6580;
   --color-line: #eae3d6;
@@ -40,7 +40,7 @@
   --shadow-soft-sm: 0 2px 8px -2px rgb(43 37 64 / 0.08);
   --shadow-soft-md: 0 8px 24px -4px rgb(43 37 64 / 0.12);
   --shadow-soft-lg: 0 16px 40px -8px rgb(43 37 64 / 0.16);
-  --shadow-brand: 0 10px 28px -6px rgb(47 143 209 / 0.35);
+  --shadow-brand: 0 10px 28px -6px rgb(217 103 126 / 0.35);
 }
 
 @layer base {
