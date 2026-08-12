@@ -5,7 +5,7 @@ import { Blob } from "../components/Blob";
 import { Button } from "../components/Button";
 import { Sparkle } from "../components/Sparkle";
 import { SITE_TAGLINE } from "../constants";
-import { livroDestaque } from "../data/livros";
+import { HeroCarousel } from "./HeroCarousel";
 
 const container = {
   hidden: {},
@@ -81,38 +81,8 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          variants={item}
-          className="relative mx-auto w-full max-w-sm md:max-w-none"
-        >
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative"
-          >
-            <Link to={`/livros/${livroDestaque.slug}`} className="block">
-              <img
-                src={livroDestaque.capa}
-                alt={`Capa do livro ${livroDestaque.titulo}`}
-                width={512}
-                height={512}
-                loading="eager"
-                className="w-full -rotate-2 rounded-2xl shadow-soft-lg"
-              />
-            </Link>
-            <span className="absolute -top-4 -left-4 rotate-[-6deg] rounded-full bg-brand-coral-600 px-4 py-1.5 text-xs font-bold tracking-wide text-white uppercase shadow-brand">
-              Lançamento
-            </span>
-          </motion.div>
-          <p className="mt-4 text-center text-sm text-ink-soft md:text-left">
-            Já disponível:{" "}
-            <Link
-              to={`/livros/${livroDestaque.slug}`}
-              className="font-semibold text-brand-blue-600 underline decoration-2 underline-offset-4"
-            >
-              {livroDestaque.titulo}
-            </Link>
-          </p>
+        <motion.div variants={item}>
+          <HeroCarousel />
         </motion.div>
       </motion.div>
     </header>
