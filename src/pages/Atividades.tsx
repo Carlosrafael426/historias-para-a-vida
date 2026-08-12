@@ -54,15 +54,18 @@ export function Atividades() {
           {atividades.map((atividade, index) => (
             <Reveal key={atividade.titulo} delay={index * 0.08} className="h-full">
               <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.2 }}
-                className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-6 text-center shadow-soft-sm"
+                whileHover={{ y: -8, scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-6 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
               >
-                <span
+                <motion.span
+                  whileHover={{ rotate: 8, scale: 1.1 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                   className={`flex h-14 w-14 items-center justify-center rounded-full ${atividade.iconBg}`}
                 >
                   <atividade.icon className={`h-6 w-6 ${atividade.iconColor}`} />
-                </span>
+                </motion.span>
                 <h2 className="font-display text-base font-semibold text-ink">
                   {atividade.titulo}
                 </h2>

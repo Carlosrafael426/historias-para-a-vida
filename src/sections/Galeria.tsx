@@ -25,9 +25,10 @@ export function Galeria() {
               height={512}
               loading="lazy"
               decoding="async"
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.2 }}
-              className="aspect-square w-full rounded-lg object-cover shadow-soft-sm"
+              whileHover={{ y: -8, scale: 1.03, rotate: -1 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="aspect-square w-full rounded-lg object-cover shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
             />
           </Reveal>
         ))}

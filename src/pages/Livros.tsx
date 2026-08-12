@@ -25,13 +25,14 @@ export function Livros() {
             <Reveal key={livro.slug} delay={index * 0.08} className="h-full">
               {livro.status === "publicado" ? (
                 <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.2 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                   className="h-full"
                 >
                   <Link
                     to={`/livros/${livro.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white shadow-soft-sm transition-shadow hover:shadow-soft-md"
+                    className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
                   >
                     <img
                       src={livro.capa}
@@ -53,13 +54,17 @@ export function Livros() {
                   </Link>
                 </motion.div>
               ) : (
-                <div className="flex h-full flex-col items-center gap-3 rounded-xl border border-dashed border-line bg-white p-8 text-center">
+                <motion.div
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="flex h-full flex-col items-center gap-3 rounded-xl border border-dashed border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-md"
+                >
                   <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue-100">
                     <Book className="h-7 w-7 text-brand-blue-600" />
                   </span>
                   <Badge color="mustard">Em breve</Badge>
                   <p className="text-sm text-ink-soft">{livro.resumo}</p>
-                </div>
+                </motion.div>
               )}
             </Reveal>
           ))}

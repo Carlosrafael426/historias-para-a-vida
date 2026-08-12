@@ -54,7 +54,14 @@
   }
 
   body {
-    @apply bg-cream text-ink font-body antialiased;
+    @apply text-ink font-body antialiased;
+    background-color: var(--color-cream);
+    background-image:
+      radial-gradient(circle at 8% 4%, rgb(217 232 245 / 0.75) 0%, transparent 32%),
+      radial-gradient(circle at 94% 12%, rgb(251 222 219 / 0.7) 0%, transparent 30%),
+      radial-gradient(circle at 12% 78%, rgb(244 232 205 / 0.6) 0%, transparent 30%),
+      radial-gradient(circle at 92% 88%, rgb(217 232 245 / 0.6) 0%, transparent 34%);
+    background-attachment: fixed;
   }
 
   h1,

@@ -9,11 +9,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line/70 bg-cream/90 shadow-soft-sm backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 transition-transform duration-200 hover:scale-105"
           onClick={() => setOpen(false)}
         >
           <img
@@ -32,10 +32,10 @@ export function Header() {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+                `rounded-lg px-3 py-2 text-sm font-semibold transition-all duration-200 hover:scale-105 ${
                   isActive
-                    ? "text-brand-coral-600"
-                    : "text-ink-soft hover:text-brand-coral-600"
+                    ? "bg-brand-coral-50 text-brand-coral-600 shadow-soft-sm"
+                    : "text-ink-soft hover:bg-brand-coral-50/70 hover:text-brand-coral-600 hover:shadow-soft-sm"
                 }`
               }
             >
@@ -47,7 +47,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink transition-colors duration-200 hover:bg-brand-coral-50 hover:text-brand-coral-600 md:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
         >
@@ -62,7 +62,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-line/70 bg-cream md:hidden"
+            className="overflow-hidden border-t border-line/70 bg-cream shadow-soft-md md:hidden"
           >
             <div className="flex flex-col px-6 py-3">
               {NAV_ITEMS.map((item) => (
@@ -72,7 +72,7 @@ export function Header() {
                   end={item.to === "/"}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `border-b border-line/60 py-3 text-base font-semibold last:border-0 ${
+                    `border-b border-line/60 py-3 text-base font-semibold transition-colors duration-200 last:border-0 ${
                       isActive ? "text-brand-coral-600" : "text-ink-soft"
                     }`
                   }

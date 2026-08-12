@@ -36,15 +36,18 @@ export function ProximosLancamentos() {
           return (
             <Reveal key={livro.slug} delay={index * 0.08}>
               <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.2 }}
-                className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-8 text-center shadow-soft-sm"
+                whileHover={{ y: -8, scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
               >
-                <span
+                <motion.span
+                  whileHover={{ rotate: 8, scale: 1.1 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                   className={`flex h-16 w-16 items-center justify-center rounded-full ${style.iconBg}`}
                 >
                   <Book className={`h-7 w-7 ${style.iconColor}`} />
-                </span>
+                </motion.span>
                 <h3 className="font-display text-lg font-semibold text-ink">
                   {livro.titulo}
                 </h3>

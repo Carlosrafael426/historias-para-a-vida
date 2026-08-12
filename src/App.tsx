@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence, motion } from "motion/react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -21,14 +22,20 @@ const Atividades = lazy(() =>
   import("./pages/Atividades").then((m) => ({ default: m.Atividades })),
 );
 
-function App() {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Header />
-      <main>
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -16 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <Suspense fallback={<div className="min-h-[60vh]" />}>
-          <Routes>
+          <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/livros" element={<Livros />} />
             <Route path="/livros/:slug" element={<LivroDetalhe />} />
@@ -37,6 +44,18 @@ function App() {
             <Route path="/atividades" element={<Atividades />} />
           </Routes>
         </Suspense>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Header />
+      <main>
+        <AnimatedRoutes />
       </main>
       <Footer />
     </BrowserRouter>
