@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primárias — reamostrar de logo.png quando disponível */
+  --color-brand-blue-50: #eff8fe;
+  --color-brand-blue-100: #dceffc;
+  --color-brand-blue-400: #4fa3d8;
+  --color-brand-blue-500: #2f8fd1;
+  --color-brand-blue-600: #1d6fa8;
+  --color-brand-blue-700: #175784;
+
+  --color-brand-coral-50: #fff1f2;
+  --color-brand-coral-100: #ffdee2;
+  --color-brand-coral-400: #ff8a97;
+  --color-brand-coral-500: #f2637a;
+  --color-brand-coral-600: #d94661;
+  --color-brand-coral-700: #b5334b;
+
+  /* Acentos pontuais — usar com moderação, nunca todos juntos */
+  --color-accent-green: #6fbe8f;
+  --color-accent-mustard: #e8b94b;
+  --color-accent-purple: #9b84d6;
+
+  /* Neutros */
+  --color-cream: #fdf6ec;
+  --color-ink: #2b2540;
+  --color-ink-soft: #6b6580;
+  --color-line: #eae3d6;
+
+  /* Tipografia */
+  --font-display: "Poppins", ui-rounded, system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+
+  /* Escala de raio para a estética arredondada/suave */
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  /* Sombras suaves tingidas com a cor de tinta */
+  --shadow-soft-sm: 0 2px 8px -2px rgb(43 37 64 / 0.08);
+  --shadow-soft-md: 0 8px 24px -4px rgb(43 37 64 / 0.12);
+  --shadow-soft-lg: 0 16px 40px -8px rgb(43 37 64 / 0.16);
+  --shadow-brand: 0 10px 28px -6px rgb(47 143 209 / 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
