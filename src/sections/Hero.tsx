@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 import { Blob } from "../components/Blob";
 import { Button } from "../components/Button";
 import { Sparkle } from "../components/Sparkle";
-import { BOOK_TITLE, SALE_URL, SITE_TAGLINE } from "../constants";
+import { SITE_TAGLINE } from "../constants";
 import { livroDestaque } from "../data/livros";
 
 const container = {
@@ -54,27 +54,29 @@ export function Hero() {
             variants={item}
             className="text-4xl leading-[1.1] font-bold text-ink sm:text-5xl md:text-6xl"
           >
-            Conheça <span className="text-brand-blue-600">{BOOK_TITLE}</span>
+            Histórias que{" "}
+            <span className="text-brand-blue-600">ensinam, emocionam</span>{" "}
+            e aproximam famílias
           </motion.h1>
 
           <motion.p variants={item} className="max-w-md text-lg text-ink-soft">
-            Uma aventura doce sobre crescer, se aceitar e encontrar conforto em
-            quem a gente ama — para ler e sentir junto com as crianças que
-            você ama.
+            Livros infantis e atividades pensados com carinho para falar de
+            empatia, amor, amizade e equilíbrio — histórias para ler e
+            sentir junto com as crianças que você ama.
           </motion.p>
 
           <motion.div
             variants={item}
             className="flex flex-wrap items-center gap-5"
           >
-            <Button href={SALE_URL} external variant="primary">
-              Comprar o livro
+            <Button href="/livros" variant="primary">
+              Conheça os livros
             </Button>
             <Link
-              to={`/livros/${livroDestaque.slug}`}
+              to="/sobre-mim"
               className="text-sm font-semibold text-ink-soft underline decoration-2 underline-offset-4 transition-colors hover:text-brand-blue-600"
             >
-              Ver detalhes do livro
+              Sobre a autora
             </Link>
           </motion.div>
         </div>
@@ -88,18 +90,29 @@ export function Hero() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="relative"
           >
-            <img
-              src={livroDestaque.capa}
-              alt={`Capa do livro ${livroDestaque.titulo}`}
-              width={512}
-              height={512}
-              loading="eager"
-              className="w-full -rotate-2 rounded-2xl shadow-soft-lg"
-            />
+            <Link to={`/livros/${livroDestaque.slug}`} className="block">
+              <img
+                src={livroDestaque.capa}
+                alt={`Capa do livro ${livroDestaque.titulo}`}
+                width={512}
+                height={512}
+                loading="eager"
+                className="w-full -rotate-2 rounded-2xl shadow-soft-lg"
+              />
+            </Link>
             <span className="absolute -top-4 -left-4 rotate-[-6deg] rounded-full bg-brand-coral-600 px-4 py-1.5 text-xs font-bold tracking-wide text-white uppercase shadow-brand">
               Lançamento
             </span>
           </motion.div>
+          <p className="mt-4 text-center text-sm text-ink-soft md:text-left">
+            Já disponível:{" "}
+            <Link
+              to={`/livros/${livroDestaque.slug}`}
+              className="font-semibold text-brand-blue-600 underline decoration-2 underline-offset-4"
+            >
+              {livroDestaque.titulo}
+            </Link>
+          </p>
         </motion.div>
       </motion.div>
     </header>

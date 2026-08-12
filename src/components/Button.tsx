@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type ButtonVariant = "primary" | "onColor" | "secondary" | "ghost";
 
@@ -29,18 +30,26 @@ export function Button({
   icon,
   className = "",
 }: ButtonProps) {
-  const externalAttrs = external
-    ? { target: "_blank", rel: "noopener noreferrer" }
-    : {};
+  const classes = `inline-flex items-center gap-2 rounded-xl px-6 py-3 font-display font-semibold transition-all duration-200 ${variantStyles[variant]} ${className}`;
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
+        {icon}
+        {children}
+      </a>
+    );
+  }
 
   return (
-    <a
-      href={href}
-      {...externalAttrs}
-      className={`inline-flex items-center gap-2 rounded-xl px-6 py-3 font-display font-semibold transition-all duration-200 ${variantStyles[variant]} ${className}`}
-    >
+    <Link to={href} className={classes}>
       {icon}
       {children}
-    </a>
+    </Link>
   );
 }

@@ -1,4 +1,3 @@
-import { CtaFinal } from "../sections/CtaFinal";
 import { Galeria } from "../sections/Galeria";
 import { Hero } from "../sections/Hero";
 import { ProximosLancamentos } from "../sections/ProximosLancamentos";
@@ -17,7 +16,6 @@ export function Home() {
       <SobreAutora />
       <Galeria />
       <ProximosLancamentos />
-      <CtaFinal />
     </>
   );
 }
