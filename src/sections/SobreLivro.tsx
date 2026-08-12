@@ -1,43 +1,52 @@
-import illustration1 from "../assets/zeca_tatu_6.jpeg";
-import illustration2 from "../assets/zeca_tatu_9.jpeg";
+import { Link } from "react-router-dom";
+import { Reveal } from "../components/Reveal";
 import { SectionContainer } from "../components/SectionContainer";
 import { SectionHeading } from "../components/SectionHeading";
-import { BOOK_TITLE } from "../constants";
+import { livroDestaque } from "../data/livros";
 
 export function SobreLivro() {
+  const galeria = livroDestaque.galeria ?? [];
+
   return (
     <SectionContainer id="sobre-o-livro">
       <div className="grid gap-12 md:grid-cols-2 md:items-center">
-        <div>
-          <SectionHeading eyebrow="Sobre o livro" title={BOOK_TITLE} />
+        <Reveal>
+          <SectionHeading eyebrow="Sobre o livro" title={livroDestaque.titulo} />
           <p className="text-lg leading-relaxed text-ink-soft">
-            Zeca Tatu é um pequeno tatu cheio de personalidade que vive uma
-            aventura especial na floresta ao lado de sua avó. Uma história
-            doce sobre crescer, se aceitar e encontrar conforto em quem a
-            gente ama.
+            {livroDestaque.resumo}
           </p>
-        </div>
+          <Link
+            to={`/livros/${livroDestaque.slug}`}
+            className="mt-6 inline-flex text-sm font-semibold text-brand-blue-600 underline decoration-2 underline-offset-4 transition-colors hover:text-brand-coral-600"
+          >
+            Ver detalhes e sinopse completa →
+          </Link>
+        </Reveal>
 
-        <div className="relative mx-auto w-full max-w-sm py-6">
-          <img
-            src={illustration1}
-            alt="Avó e Zeca Tatu conversando em um banco na floresta"
-            width={512}
-            height={512}
-            loading="lazy"
-            decoding="async"
-            className="w-3/4 rounded-xl shadow-soft-md"
-          />
-          <img
-            src={illustration2}
-            alt="Zeca Tatu saindo de sua toca entre samambaias"
-            width={1024}
-            height={1024}
-            loading="lazy"
-            decoding="async"
-            className="absolute right-0 -bottom-6 w-1/2 rounded-xl shadow-soft-lg ring-4 ring-cream md:right-2"
-          />
-        </div>
+        <Reveal delay={0.1} className="relative mx-auto w-full max-w-sm py-6">
+          {galeria[1] && (
+            <img
+              src={galeria[1].src}
+              alt={galeria[1].alt}
+              width={512}
+              height={512}
+              loading="lazy"
+              decoding="async"
+              className="w-3/4 rounded-xl shadow-soft-md"
+            />
+          )}
+          {galeria[2] && (
+            <img
+              src={galeria[2].src}
+              alt={galeria[2].alt}
+              width={1024}
+              height={1024}
+              loading="lazy"
+              decoding="async"
+              className="absolute right-0 -bottom-6 w-1/2 rounded-xl shadow-soft-lg ring-4 ring-cream md:right-2"
+            />
+          )}
+        </Reveal>
       </div>
     </SectionContainer>
   );
