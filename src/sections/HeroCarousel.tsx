@@ -40,7 +40,7 @@ export function HeroCarousel() {
 
   return (
     <div
-      className="group relative mx-auto w-full max-w-sm md:max-w-none"
+      className="relative mx-auto w-full max-w-sm md:max-w-none"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -95,7 +95,7 @@ export function HeroCarousel() {
           type="button"
           onClick={prev}
           aria-label="Livro anterior"
-          className="absolute top-1/2 -left-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-ink shadow-soft-md opacity-70 transition-all duration-200 hover:scale-110 hover:text-brand-coral-600 md:-left-5 md:opacity-0 md:group-hover:opacity-100"
+          className="absolute top-1/2 -left-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-ink opacity-90 shadow-soft-md transition-all duration-200 hover:scale-110 hover:opacity-100 hover:text-brand-coral-600 md:-left-5"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -103,7 +103,7 @@ export function HeroCarousel() {
           type="button"
           onClick={next}
           aria-label="Próximo livro"
-          className="absolute top-1/2 -right-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-ink shadow-soft-md opacity-70 transition-all duration-200 hover:scale-110 hover:text-brand-coral-600 md:-right-5 md:opacity-0 md:group-hover:opacity-100"
+          className="absolute top-1/2 -right-3 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-ink opacity-90 shadow-soft-md transition-all duration-200 hover:scale-110 hover:opacity-100 hover:text-brand-coral-600 md:-right-5"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
