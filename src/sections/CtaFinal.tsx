@@ -4,7 +4,7 @@ import { BOOK_TITLE, SALE_URL } from "../constants";
 
 export function CtaFinal() {
   return (
-    <div className="bg-brand-blue-500">
+    <div className="bg-brand-blue-600">
       <SectionContainer>
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">

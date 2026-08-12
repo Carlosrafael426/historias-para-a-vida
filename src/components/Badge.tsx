@@ -4,10 +4,10 @@ type BadgeColor = "blue" | "coral" | "green" | "mustard" | "purple";
 
 const colorStyles: Record<BadgeColor, string> = {
   blue: "bg-brand-blue-100 text-brand-blue-600",
-  coral: "bg-brand-coral-100 text-brand-coral-600",
-  green: "bg-accent-green/20 text-accent-green",
-  mustard: "bg-accent-mustard/20 text-accent-mustard",
-  purple: "bg-accent-purple/20 text-accent-purple",
+  coral: "bg-brand-coral-100 text-brand-coral-700",
+  green: "bg-accent-green/15 text-accent-green-700",
+  mustard: "bg-accent-mustard/15 text-accent-mustard-700",
+  purple: "bg-accent-purple/15 text-accent-purple-700",
 };
 
 interface BadgeProps {

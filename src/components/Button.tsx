@@ -4,7 +4,7 @@ type ButtonVariant = "primary" | "onColor" | "secondary" | "ghost";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand-coral-500 text-white shadow-brand hover:bg-brand-coral-600 hover:-translate-y-0.5",
+    "bg-brand-coral-600 text-white shadow-brand hover:bg-brand-coral-700 hover:-translate-y-0.5",
   onColor:
     "bg-white text-brand-blue-600 shadow-soft-md hover:bg-cream hover:-translate-y-0.5",
   secondary:

@@ -15,8 +15,8 @@ export function Hero() {
           <img
             src={logo}
             alt="Histórias para a Vida"
-            width={1408}
-            height={768}
+            width={560}
+            height={305}
             className="h-14 w-auto md:h-16"
           />
 

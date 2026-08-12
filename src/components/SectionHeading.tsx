@@ -16,7 +16,7 @@ export function SectionHeading({
   return (
     <div className={`mb-10 flex flex-col gap-3 ${alignClass} ${className}`}>
       {eyebrow && (
-        <span className="inline-flex w-fit rounded-full bg-brand-coral-100 px-4 py-1 text-sm font-semibold text-brand-coral-600">
+        <span className="inline-flex w-fit rounded-full bg-brand-coral-100 px-4 py-1 text-sm font-semibold text-brand-coral-700">
           {eyebrow}
         </span>
       )}

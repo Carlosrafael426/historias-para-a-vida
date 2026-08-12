@@ -21,6 +21,11 @@
   --color-accent-mustard: #ddae45;
   --color-accent-purple: #8b63a8;
 
+  /* Variantes escuras dos acentos — para texto sobre fundo claro (contraste WCAG AA) */
+  --color-accent-green-700: #1f6b45;
+  --color-accent-mustard-700: #6e5217;
+  --color-accent-purple-700: #6b4a8a;
+
   /* Neutros */
   --color-cream: #faf7ef; /* próximo do fundo real de logo.png, evita "costura" visível */
   --color-ink: #2b2540;
@@ -40,7 +45,7 @@
   --shadow-soft-sm: 0 2px 8px -2px rgb(43 37 64 / 0.08);
   --shadow-soft-md: 0 8px 24px -4px rgb(43 37 64 / 0.12);
   --shadow-soft-lg: 0 16px 40px -8px rgb(43 37 64 / 0.16);
-  --shadow-brand: 0 10px 28px -6px rgb(217 103 126 / 0.35);
+  --shadow-brand: 0 10px 28px -6px rgb(191 76 102 / 0.35);
 }
 
 @layer base {
