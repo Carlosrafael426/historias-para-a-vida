@@ -26,34 +26,22 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {NAV_ITEMS.map((item) =>
-            item.external ? (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-ink-soft transition-colors hover:text-brand-coral-600"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <NavLink
-                key={item.label}
-                to={item.to!}
-                end={item.to === "/"}
-                className={({ isActive }) =>
-                  `rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                    isActive
-                      ? "text-brand-coral-600"
-                      : "text-ink-soft hover:text-brand-coral-600"
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ),
-          )}
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+                  isActive
+                    ? "text-brand-coral-600"
+                    : "text-ink-soft hover:text-brand-coral-600"
+                }`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
         <button
@@ -77,34 +65,21 @@ export function Header() {
             className="overflow-hidden border-t border-line/70 bg-cream md:hidden"
           >
             <div className="flex flex-col px-6 py-3">
-              {NAV_ITEMS.map((item) =>
-                item.external ? (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-b border-line/60 py-3 text-base font-semibold text-ink-soft last:border-0"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <NavLink
-                    key={item.label}
-                    to={item.to!}
-                    end={item.to === "/"}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `border-b border-line/60 py-3 text-base font-semibold last:border-0 ${
-                        isActive ? "text-brand-coral-600" : "text-ink-soft"
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                ),
-              )}
+              {NAV_ITEMS.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.to}
+                  end={item.to === "/"}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `border-b border-line/60 py-3 text-base font-semibold last:border-0 ${
+                      isActive ? "text-brand-coral-600" : "text-ink-soft"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
             </div>
           </motion.nav>
         )}

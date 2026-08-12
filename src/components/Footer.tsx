@@ -10,7 +10,6 @@ import { InstagramIcon } from "./InstagramIcon";
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const internalLinks = NAV_ITEMS.filter((item) => !item.external);
 
   return (
     <footer className="border-t border-line bg-brand-blue-50/40">
@@ -39,10 +38,10 @@ export function Footer() {
             Navegação
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {internalLinks.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <li key={item.label}>
                 <Link
-                  to={item.to!}
+                  to={item.to}
                   className="text-ink-soft transition-colors hover:text-brand-coral-600"
                 >
                   {item.label}

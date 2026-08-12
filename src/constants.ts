@@ -9,16 +9,13 @@ export const AUTHOR_NAME = "Izabel Devecchi";
 
 export interface NavItem {
   label: string;
-  to?: string;
-  href?: string;
-  external?: boolean;
+  to: string;
 }
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", to: "/" },
   { label: "Livros", to: "/livros" },
   { label: "Sobre mim", to: "/sobre-mim" },
-  { label: "Loja", href: SALE_URL, external: true },
   { label: "Lançamentos", to: "/proximos-lancamentos" },
   { label: "Atividades", to: "/atividades" },
 ];
