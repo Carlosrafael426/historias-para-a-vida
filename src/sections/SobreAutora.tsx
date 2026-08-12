@@ -27,8 +27,9 @@ export function SobreAutora() {
           <Reveal delay={0.1}>
             <SectionHeading eyebrow="Sobre a autora" title={AUTHOR_NAME} />
             <p className="mb-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-              Izabel Devecchi é escritora e apaixonada por contar histórias
-              que ensinam, emocionam e aproximam famílias através da leitura.
+              Izabel Devecchi é educadora, cristã e apaixonada por crianças —
+              uma combinação que se reflete em cada história que escreve,
+              sempre com valores, carinho e fé no coração.
             </p>
             <Link
               to="/sobre-mim"

@@ -34,17 +34,21 @@ export function SobreMim() {
             className="space-y-4 text-lg leading-relaxed text-ink-soft"
           >
             <p>
-              Izabel Devecchi é escritora e apaixonada por contar histórias
-              que ensinam, emocionam e aproximam famílias através da leitura.
+              Izabel Devecchi é educadora, cristã e temente a Deus, com um
+              carinho enorme por crianças — características que se tornaram
+              a essência de tudo o que escreve.
             </p>
             <p>
-              Acredita que os livros são pontes entre gerações — um jeito
-              gostoso de crianças e adultos aprenderem juntos sobre empatia,
-              amor, amizade, saúde, equilíbrio e educação.
+              Como educadora, viveu de perto o poder das histórias na
+              formação de valores como empatia, amor, amizade, saúde e
+              equilíbrio. É esse olhar atento, acolhedor e cheio de fé que
+              dá vida a personagens como Zeca Tatu.
             </p>
             <p>
-              Cada história nasce com o cuidado de quem quer que a leitura
-              seja um momento de afeto em família, não apenas uma tarefa.
+              Acredita que os livros são pontes entre gerações, e que cada
+              leitura compartilhada em família é uma semente de bons
+              valores, plantada com carinho para florescer no coração das
+              crianças.
             </p>
             <Button
               href={INSTAGRAM_URL}
