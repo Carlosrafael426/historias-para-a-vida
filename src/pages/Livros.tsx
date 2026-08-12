@@ -57,7 +57,7 @@ export function Livros() {
                 <motion.div
                   whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="flex h-full flex-col items-center gap-3 rounded-xl border border-dashed border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-md"
+                  className="flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-md"
                 >
                   <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue-100">
                     <Book className="h-7 w-7 text-brand-blue-600" />
