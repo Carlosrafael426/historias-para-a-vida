@@ -12,7 +12,7 @@ export function SobreAutora() {
       <SectionContainer id="sobre-a-autora">
         <div className="grid gap-12 md:grid-cols-[280px_1fr] md:items-center">
           <Reveal className="relative mx-auto w-56 md:w-full">
-            <Blob className="pointer-events-none absolute -inset-8 -z-10 text-brand-coral-100" />
+            <Blob className="pointer-events-none absolute -inset-8 -z-10 text-accent-mustard/30" />
             <img
               src={photo}
               alt={`${AUTHOR_NAME}, autora do livro`}

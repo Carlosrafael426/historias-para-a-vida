@@ -18,7 +18,7 @@ export function SobreMim() {
       <SectionContainer>
         <div className="grid gap-12 md:grid-cols-[320px_1fr] md:items-center">
           <Reveal className="relative mx-auto w-64 md:w-full">
-            <Blob className="pointer-events-none absolute -inset-8 -z-10 text-brand-coral-100" />
+            <Blob className="pointer-events-none absolute -inset-8 -z-10 text-accent-teal/25" />
             <img
               src={photo}
               alt={`${AUTHOR_NAME}, autora do livro`}

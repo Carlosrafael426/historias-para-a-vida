@@ -8,8 +8,15 @@ import { SectionContainer } from "../components/SectionContainer";
 import { livros } from "../data/livros";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
+const emBreveStyles = [
+  { iconBg: "bg-brand-blue-100", iconColor: "text-brand-blue-600", top: "border-t-brand-blue-400" },
+  { iconBg: "bg-accent-teal/15", iconColor: "text-accent-teal-700", top: "border-t-accent-teal" },
+  { iconBg: "bg-accent-purple/15", iconColor: "text-accent-purple-700", top: "border-t-accent-purple" },
+];
+
 export function Livros() {
   useDocumentTitle("Livros");
+  const proximos = livros.filter((livro) => livro.status === "em-breve");
 
   return (
     <>
@@ -57,10 +64,20 @@ export function Livros() {
                 <motion.div
                   whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-md"
+                  className={`flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-t-4 border-dashed border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-md ${
+                    emBreveStyles[proximos.indexOf(livro) % emBreveStyles.length].top
+                  }`}
                 >
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue-100">
-                    <Book className="h-7 w-7 text-brand-blue-600" />
+                  <span
+                    className={`flex h-16 w-16 items-center justify-center rounded-full ${
+                      emBreveStyles[proximos.indexOf(livro) % emBreveStyles.length].iconBg
+                    }`}
+                  >
+                    <Book
+                      className={`h-7 w-7 ${
+                        emBreveStyles[proximos.indexOf(livro) % emBreveStyles.length].iconColor
+                      }`}
+                    />
                   </span>
                   <Badge color="mustard">Em breve</Badge>
                   <p className="text-sm text-ink-soft">{livro.resumo}</p>

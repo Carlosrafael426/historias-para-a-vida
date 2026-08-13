@@ -14,6 +14,7 @@ const atividades = [
     descricao: `Uma ilustração do ${BOOK_TITLE} para imprimir e colorir com a criançada.`,
     iconBg: "bg-brand-coral-100",
     iconColor: "text-brand-coral-600",
+    top: "border-t-brand-coral-400",
   },
   {
     icon: Search,
@@ -21,6 +22,7 @@ const atividades = [
     descricao: "Encontre os amigos de Zeca Tatu escondidos entre as letras.",
     iconBg: "bg-brand-blue-100",
     iconColor: "text-brand-blue-600",
+    top: "border-t-brand-blue-400",
   },
   {
     icon: Puzzle,
@@ -28,6 +30,7 @@ const atividades = [
     descricao: "Combine os pares de cartas com os personagens da floresta.",
     iconBg: "bg-accent-green/15",
     iconColor: "text-accent-green-700",
+    top: "border-t-accent-green",
   },
   {
     icon: SquareDashedMousePointer,
@@ -35,6 +38,7 @@ const atividades = [
     descricao: "Uma atividade para desenhar Zeca Tatu ligando os números.",
     iconBg: "bg-accent-purple/15",
     iconColor: "text-accent-purple-700",
+    top: "border-t-accent-purple",
   },
 ];
 
@@ -57,7 +61,7 @@ export function Atividades() {
                 whileHover={{ y: -8, scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-6 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
+                className={`flex h-full flex-col items-center gap-3 rounded-xl border border-t-4 border-line bg-white p-6 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg ${atividade.top}`}
               >
                 <motion.span
                   whileHover={{ rotate: 8, scale: 1.1 }}

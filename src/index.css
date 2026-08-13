@@ -1,30 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primárias — amostradas da logo.png (azul do livro/título + coral do "Amor") */
-  --color-brand-blue-50: #eef5fb;
-  --color-brand-blue-100: #d9e8f5;
-  --color-brand-blue-400: #5c8fbe;
-  --color-brand-blue-500: #3e7cb1;
-  --color-brand-blue-600: #2d6291;
-  --color-brand-blue-700: #234c72;
+  /* Primárias — vívidas, inspiradas nas cores das ilustrações dos livros */
+  --color-brand-blue-50: #e6f4ff;
+  --color-brand-blue-100: #c2e4ff;
+  --color-brand-blue-400: #4fb4f5;
+  --color-brand-blue-500: #1e9be8;
+  --color-brand-blue-600: #0868a8;
+  --color-brand-blue-700: #064e80;
 
-  --color-brand-coral-50: #fdf1f0;
-  --color-brand-coral-100: #fbdedb;
-  --color-brand-coral-400: #e58a8f;
-  --color-brand-coral-500: #d9677e;
-  --color-brand-coral-600: #bf4c66;
-  --color-brand-coral-700: #9c3a52;
+  --color-brand-coral-50: #ffecf1;
+  --color-brand-coral-100: #ffd1de;
+  --color-brand-coral-400: #ff7a9e;
+  --color-brand-coral-500: #f2477a;
+  --color-brand-coral-600: #cc1b52;
+  --color-brand-coral-700: #a81443;
 
-  /* Acentos pontuais — usar com moderação, nunca todos juntos */
-  --color-accent-green: #4f9e75;
-  --color-accent-mustard: #ddae45;
-  --color-accent-purple: #8b63a8;
+  /* Acentos — usados com mais liberdade agora, em ícones, badges e cards */
+  --color-accent-green: #22b573;
+  --color-accent-mustard: #f5a623;
+  --color-accent-purple: #9b4fe0;
+  --color-accent-teal: #14b8a6;
 
   /* Variantes escuras dos acentos — para texto sobre fundo claro (contraste WCAG AA) */
-  --color-accent-green-700: #1f6b45;
-  --color-accent-mustard-700: #6e5217;
-  --color-accent-purple-700: #6b4a8a;
+  --color-accent-green-700: #157a4d;
+  --color-accent-mustard-700: #8a5a0a;
+  --color-accent-purple-700: #6b2fa0;
+  --color-accent-teal-700: #0c6459;
 
   /* Neutros */
   --color-cream: #faf7ef; /* próximo do fundo real de logo.png, evita "costura" visível */
@@ -45,7 +47,7 @@
   --shadow-soft-sm: 0 2px 8px -2px rgb(43 37 64 / 0.08);
   --shadow-soft-md: 0 8px 24px -4px rgb(43 37 64 / 0.12);
   --shadow-soft-lg: 0 16px 40px -8px rgb(43 37 64 / 0.16);
-  --shadow-brand: 0 10px 28px -6px rgb(191 76 102 / 0.35);
+  --shadow-brand: 0 10px 28px -6px rgb(204 27 82 / 0.35);
 }
 
 @layer base {
@@ -57,10 +59,11 @@
     @apply text-ink font-body antialiased;
     background-color: var(--color-cream);
     background-image:
-      radial-gradient(circle at 8% 4%, rgb(217 232 245 / 0.75) 0%, transparent 32%),
-      radial-gradient(circle at 94% 12%, rgb(251 222 219 / 0.7) 0%, transparent 30%),
-      radial-gradient(circle at 12% 78%, rgb(244 232 205 / 0.6) 0%, transparent 30%),
-      radial-gradient(circle at 92% 88%, rgb(217 232 245 / 0.6) 0%, transparent 34%);
+      radial-gradient(circle at 6% 2%, rgb(30 155 232 / 0.22) 0%, transparent 34%),
+      radial-gradient(circle at 96% 10%, rgb(242 71 122 / 0.2) 0%, transparent 32%),
+      radial-gradient(circle at 10% 76%, rgb(245 166 35 / 0.22) 0%, transparent 32%),
+      radial-gradient(circle at 94% 86%, rgb(20 184 166 / 0.18) 0%, transparent 34%),
+      radial-gradient(circle at 50% 45%, rgb(155 79 224 / 0.1) 0%, transparent 40%);
     background-attachment: fixed;
   }
 

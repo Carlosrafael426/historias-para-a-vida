@@ -20,9 +20,10 @@ const item = {
 export function Hero() {
   return (
     <header className="relative overflow-hidden">
-      <Blob className="pointer-events-none absolute -top-24 -left-32 h-80 w-80 text-brand-blue-100 md:h-[26rem] md:w-[26rem]" />
-      <Blob className="pointer-events-none absolute -right-24 -bottom-40 h-72 w-72 text-brand-coral-100 md:h-96 md:w-96" />
-      <Blob className="pointer-events-none absolute top-1/3 right-[8%] hidden h-40 w-40 text-accent-mustard/25 md:block" />
+      <Blob className="pointer-events-none absolute -top-24 -left-32 h-80 w-80 text-brand-blue-400/30 md:h-[26rem] md:w-[26rem]" />
+      <Blob className="pointer-events-none absolute -right-24 -bottom-40 h-72 w-72 text-brand-coral-400/30 md:h-96 md:w-96" />
+      <Blob className="pointer-events-none absolute top-1/3 right-[8%] hidden h-40 w-40 text-accent-mustard/30 md:block" />
+      <Blob className="pointer-events-none absolute top-1/2 left-[6%] hidden h-28 w-28 text-accent-teal/25 lg:block" />
       <Sparkle className="pointer-events-none absolute top-16 right-[38%] hidden h-6 w-6 text-brand-coral-400 md:block" />
       <Sparkle className="pointer-events-none absolute bottom-24 left-[12%] h-5 w-5 text-brand-blue-400" />
 

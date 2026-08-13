@@ -12,7 +12,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-line bg-brand-blue-50/40">
+    <footer className="border-t border-line bg-brand-blue-50/60">
+      <div className="h-1.5 bg-gradient-to-r from-accent-teal via-accent-purple via-50% to-brand-coral-400" />
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
           <span className="font-display text-xl font-bold text-brand-blue-600">

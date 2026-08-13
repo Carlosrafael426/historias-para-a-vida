@@ -10,9 +10,21 @@ import { livros } from "../data/livros";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const cardStyles = [
-  { iconBg: "bg-brand-blue-100", iconColor: "text-brand-blue-600" },
-  { iconBg: "bg-accent-green/15", iconColor: "text-accent-green-700" },
-  { iconBg: "bg-accent-purple/15", iconColor: "text-accent-purple-700" },
+  {
+    iconBg: "bg-brand-blue-100",
+    iconColor: "text-brand-blue-600",
+    top: "border-t-brand-blue-400",
+  },
+  {
+    iconBg: "bg-accent-teal/15",
+    iconColor: "text-accent-teal-700",
+    top: "border-t-accent-teal",
+  },
+  {
+    iconBg: "bg-accent-purple/15",
+    iconColor: "text-accent-purple-700",
+    top: "border-t-accent-purple",
+  },
 ];
 
 export function Lancamentos() {
@@ -37,7 +49,7 @@ export function Lancamentos() {
                   whileHover={{ y: -8, scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="flex h-full flex-col items-center gap-3 rounded-xl border border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg"
+                  className={`flex h-full flex-col items-center gap-3 rounded-xl border border-t-4 border-line bg-white p-8 text-center shadow-soft-sm transition-shadow duration-300 hover:shadow-soft-lg ${style.top}`}
                 >
                   <motion.span
                     whileHover={{ rotate: 8, scale: 1.1 }}
