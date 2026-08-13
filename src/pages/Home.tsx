@@ -1,4 +1,3 @@
-import { Galeria } from "../sections/Galeria";
 import { Hero } from "../sections/Hero";
 import { ProximosLancamentos } from "../sections/ProximosLancamentos";
 import { SobreAutora } from "../sections/SobreAutora";
@@ -12,7 +11,6 @@ export function Home() {
     <>
       <Hero />
       <SobreAutora />
-      <Galeria />
       <ProximosLancamentos />
     </>
   );

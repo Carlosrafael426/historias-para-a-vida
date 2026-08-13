@@ -112,5 +112,3 @@ export const livros: Livro[] = [
     sinopse: "",
   },
 ];
-
-export const livroDestaque = livros.find((l) => l.status === "publicado")!;
