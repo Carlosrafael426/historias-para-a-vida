@@ -64,10 +64,10 @@ export function HeroCarousel() {
                   <img
                     src={livro.capa}
                     alt={`Capa do livro ${livro.titulo}`}
-                    width={512}
-                    height={512}
+                    width={livro.capaWidth ?? 512}
+                    height={livro.capaHeight ?? 512}
                     loading="eager"
-                    className="w-full -rotate-2 rounded-2xl shadow-soft-lg transition-shadow duration-300 hover:shadow-soft-lg"
+                    className="aspect-square w-full -rotate-2 rounded-2xl object-cover shadow-soft-lg transition-shadow duration-300 hover:shadow-soft-lg"
                   />
                 ) : (
                   <div className="flex aspect-square w-full -rotate-2 flex-col items-center justify-center gap-3 rounded-2xl bg-white shadow-soft-lg">

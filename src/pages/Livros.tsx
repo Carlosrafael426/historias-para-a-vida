@@ -37,8 +37,8 @@ export function Livros() {
                     <img
                       src={livro.capa}
                       alt={`Capa do livro ${livro.titulo}`}
-                      width={512}
-                      height={512}
+                      width={livro.capaWidth ?? 512}
+                      height={livro.capaHeight ?? 512}
                       loading="lazy"
                       decoding="async"
                       className="aspect-square w-full object-cover"

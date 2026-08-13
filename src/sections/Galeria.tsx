@@ -21,8 +21,8 @@ export function Galeria() {
             <motion.img
               src={img.src}
               alt={img.alt}
-              width={512}
-              height={512}
+              width={img.width}
+              height={img.height}
               loading="lazy"
               decoding="async"
               whileHover={{ y: -8, scale: 1.03, rotate: -1 }}

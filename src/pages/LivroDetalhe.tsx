@@ -25,8 +25,8 @@ export function LivroDetalhe() {
           <img
             src={livro.capa}
             alt={`Capa do livro ${livro.titulo}`}
-            width={512}
-            height={512}
+            width={livro.capaWidth ?? 512}
+            height={livro.capaHeight ?? 512}
             loading="eager"
             className="w-full rounded-2xl shadow-soft-lg"
           />
@@ -59,8 +59,8 @@ export function LivroDetalhe() {
                 key={img.src}
                 src={img.src}
                 alt={img.alt}
-                width={512}
-                height={512}
+                width={img.width}
+                height={img.height}
                 loading="lazy"
                 decoding="async"
                 className="aspect-square w-full rounded-lg object-cover shadow-soft-sm"
